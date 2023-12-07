@@ -1,0 +1,52 @@
+  
+
+
+
+.................
+book database mongoDb
+
+
+db.book.insert([
+  {"bookid":100,"bookname":"DDA","publisher":"vision","pubyear":2017,"writter":"mr.anuj","cost":500,"lang":"english"},
+    {"bookid":101,"bookname":"ai","publisher":"vision","pubyear":2016,"writter":"mr.raju","cost":350,"lang":"english"}]);
+  
+  
+  
+  db.publisher.insert([
+    
+    {"pubid":200,"pubname":"nirali","add":"pune","age":50,"gender":"male"},
+    
+      {"pubid":202,"pubname":"vision","add":"mumbai","age":45,"gender":"male"}]);
+  
+>>>>>>>>query>>>>>>>>>
+  
+    1)db.publisher.find({"add":"mumbai"},
+    {"pubid":100,"pubname":1})
+   
+   //2) db.book.find({"cost":{$gt:1000},
+   // {"pubid":101,"bookname":"vision"}})
+
+
+
+
+
+
+
+
+
+
+student data base
+
+db.student.insert([
+  {"studid":101,"studname":"prakash","age":21,"gender":"male","add":"pune","cource":["computerscience","math"],"marks":81},
+  
+  {"studid":102,"studname":"prallavi","age":21,"gender":"femal","add":"nashik","cource":["go programming","low"],"marks":45},
+  
+    {"studid":103,"studname":"priti","age":23,"gender":"femal","add":"mumbai","cource":["java","c"],"marks":35},
+  
+    {"studid":104,"studname":"satish","age":20,"gender":"male","add":"baramati","cource":["java","c"],"marks":47}]);
+   
+ >>>>>>query>>>>>>>
+
+1)db.student.find({marks:{$gt:80}})
+
