@@ -1,0 +1,26 @@
+> program to create map with Rollno. and firstName. Print all 
+student info with same name. object Main { 
+def main(args: Array[String]): Unit = 
+{ val map = Map( 1 -> "Aman", 
+2 -> "Ram", 
+3 -> "Riya", 
+4 -> "Priya", 
+5 -> "Madhu", 
+6 -> "Ram" 
+ ) 
+ println("Enter Name to search: ") val 
+searchName = scala.io.StdIn.readLine() 
+ def printName(name: String):Unit = { 
+ val student = map.filter{case(_,studentName) => studentName == 
+name} 
+ if(student.isEmpty){ 
+ println("No Student Found With"+name+" Name") 
+ } 
+else { 
+ println(s"Student With the Name $name") 
+ student.foreach{case(roll,_) => println(s"Roll Number: $roll")} 
+ } 
+ } 
+ printName(searchName) 
+ } 
+}

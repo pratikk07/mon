@@ -1,0 +1,22 @@
+3 -> merge two sets and calculate product and average of all elements 
+of the Set 
+import scala.collection.immutable.Set 
+object Main{ 
+ def main(args : Array[String]): Unit = 
+{ var product : Int = 1 var sum : Int 
+= 0 var count :Int = 0 
+ var mySet1 = Set(21, 13, 15, 34, 30, 20, 64, 41, 
+50) var mySet2 = Set(12, 10, 45, 20, 45, 17, 37, 
+28) var merge = mySet1.union(mySet2) 
+println("Union of two Sets is: "+merge) for(item 
+<- merge){ product *= item 
+ } 
+println("Product of all the elements in the set is: "+product) 
+ merge.foreach {element 
+=> sum += element 
+count += 1 
+ } 
+ var average :Int = sum /count 
+ println("Average of all elements in the set is: "+average) 
+}
+}

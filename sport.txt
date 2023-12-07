@@ -1,0 +1,33 @@
+6 -> Define a class Sports. Derive two classes Indoor and Outdoor. 
+Define appropriate constructors and operations. Create an object 
+and perform operations 
+class Sport(val id:Int, val name:String, val descr:String, 
+val amount:Double){ def displayDetails():Unit = { 
+println("Sport id: "+id) println("Sport Name: "+name) 
+println("Sport Description: "+descr) println("Sport 
+Amount: "+amount) 
+ } } 
+class Indoor(id:Int, name:String, descr:String, amount:Double, val 
+equipment:String)extends Sport(id, name, descr, amount){ 
+override def displayDetails():Unit = { super.displayDetails() 
+ println("Equipment Required: "+equipment) 
+ } 
+} 
+class Outdoor(id:Int, name: String, descr: String, amount: Double, 
+val location:String)extends Sport(id, name, descr, amount){ 
+override def displayDetails(): Unit = { super.displayDetails() 
+ println("Location For Sport: "+location) 
+ } 
+} 
+object Main { 
+ def main(args: Array[String]): Unit = { 
+ var indoor = new Indoor(11, "Chess", "Play Between Two 
+Players", 100.0, "ChessBoard") 
+ var outdoor = new Outdoor(20, "Cricket", "Team Requires 11 
+Players", 500.0, "Cricket Ground") 
+ println("Details of Indoor Game: ") 
+indoor.displayDetails() println() 
+ println("Details of Outdoor Game: ") 
+outdoor.displayDetails() 
+ } 
+}
