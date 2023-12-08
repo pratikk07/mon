@@ -1,0 +1,17 @@
+object InsertionSortMatrix {
+  def insertionSortMatrix(matrix: Array[Array[Int]]): Array[Array[Int]] = {
+    matrix.map(_.sorted)
+  }
+
+  def main(args: Array[String]): Unit = {
+    val matrix = Array(
+      Array(5, 3, 9),
+      Array(1, 8, 2),
+      Array(7, 4, 6)
+    )
+
+    val sortedMatrix = insertionSortMatrix(matrix)
+
+    sortedMatrix.foreach(row => println(row.mkString(" ")))
+  }
+}
